@@ -1,0 +1,292 @@
+
+  h1 {
+    position: relative;/*相対位置*/
+    /* padding-left: 1.2em;アイコン分のスペース */
+    line-height: 1.4;/*行高*/
+    color: #ffffff;/*文字色*/
+    /* background-color: #fa1a65; */
+    background-color: rgb(253, 169, 169);
+  }
+  
+
+/* ↓id="nav"の中のulに対してCSSを適用*/
+#nav ul {
+    list-style-type: none; /*箇条書きのポッチを消す*/
+    text-align:left /*左右中央寄せは親要素に対して指定*/
+  }
+  
+  /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
+  #nav ul li { 
+    display: inline-block;/*inline-blockにします*/
+    width: 150px;/*幅も指定できる*/
+    padding: 10px 0;/*余白も指定できる*/
+    margin: 10px 0;/*余白も指定できる*/
+    vertical-align: middle;/*縦の表示位置も指定できる*/
+    background: #ff86ae;/*背景を水色に*/
+    font-weight: bold;/*文字を太字に*/
+    color:white; /*文字色を白に*/
+    text-align: center;
+  }
+
+
+
+/* ここからメニューのCSSなのでいじらない */
+
+/* body {
+  
+  font-family: arial;
+  width: 100vw;
+  height: 100vh;
+  animation: bugfix infinite 1s;
+  -webkit-animation: bugfix infinite 1s;
+} */
+
+@keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+#overlay-button {
+  position: absolute;
+  right: 2em;
+  top: 3em;
+  padding: 26px 11px;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+#overlay-button span {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  display: block;
+  transition: all .2s ease-in-out;
+}
+#overlay-button span:before {
+  top: -10px;
+  visibility: visible;
+}
+#overlay-button span:after {
+  top: 10px;
+}
+#overlay-button span:before, #overlay-button span:after {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: white;
+  position: absolute;
+  content: "";
+  transition: all .2s ease-in-out;
+}
+#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+  background: #fff;
+}
+
+input[type=checkbox] {
+  display: none; 
+  
+}
+
+input[type=checkbox]:checked ~ #overlay {
+  visibility: visible; 
+}
+
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+  background: transparent;
+  
+  
+}
+input[type=checkbox]:checked ~ #overlay-button span:before {
+  transform: rotate(45deg) translate(7px, 7px);
+
+}
+input[type=checkbox]:checked ~ #overlay-button span:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+
+
+}
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: #ec6451;
+  z-index: 2;
+  visibility: hidden;
+  position: fixed;
+}
+#overlay.active {
+
+}
+#overlay ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  padding-left: 0;
+  list-style-type: none;
+}
+#overlay ul li {
+  padding: 1em;
+}
+#overlay ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+#overlay ul li a:hover {
+  color: #000!important;
+}
+
+
+.arigatou{
+  color: rgb(255, 255, 255);
+}
+
+/* ここまでメニューのCSSなのでいじらない */
+
+
+
+
+
+
+
+.all{
+  display: flex;
+  /* margin: 20px;  */
+  /* bodyの外側の余白を指定する */
+/* padding: 30px 10px 50px 10px;  */
+/* bodyの内側余白を指定する(上:右:下:左) */
+}
+
+
+/* ここまでカードを半分で表示のCSS */
+.cardall{
+ margin: 100 0 0 0; 
+  width: 50%;                /* 横幅を200pxに指定 */
+  height: 700px;              
+   /* 横幅を200pxに指定 */
+  /* border: 1px solid rgb(250, 234, 206);    */
+     /* わかりやすくボーダーを引く */
+  overflow-y: scroll;        
+    /* 縦方向にスクロール可能にする */
+}
+/* ここまでカードを半分で表示のCSS */
+
+
+
+/* ここまで地図を半分で表示のCSS */
+.google{
+  width: 50%; 
+  margin: 100 0 0 0;   
+  /* text-align: right;  */
+}
+/* ここまで地図を半分で表示のCSS */
+
+
+
+
+/* ここからカード１枚分のCSSなのでいじらない */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(253, 169, 169);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.l-wrapper {
+  margin: 3rem auto;
+  width: 320px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+  color: #212121;
+  text-decoration: none;
+}
+
+.card__header {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.card__title {
+  padding: 1rem 1rem 0;
+  font-size: 1.25rem;
+  order: 1;
+}
+
+.card__thumbnail {
+  margin: 0;
+  order: 0;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__body {
+  padding: 1rem;
+}
+
+.card__text {
+  font-size: .75rem;
+}
+
+.card__text + .card__text {
+  margin-top: .5rem;
+}
+
+.card__text.-number {
+  text-align: right;
+}
+
+.card__footer {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out;
+}
+
+.button.-compact {
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  background-color: #e6749a;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button.-compact:hover,
+.button.-compact:focus {
+  background-color: #f0ac5e;
+}
+/* ここまでカードのCSSなのでいじらない */
