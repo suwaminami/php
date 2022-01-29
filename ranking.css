@@ -1,0 +1,163 @@
+
+
+body{
+    background-color: white;
+    min-width: 800px!important;
+}
+@media screen and (max-width: 800px){
+    *{
+    width:500px;
+    overflow: scroll;
+    }
+  }
+  
+  .overview {
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      background: #f0f7ff;
+      border: dashed 2px #e2a31c;/*点線*/
+  }
+  .overview p {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+  }
+  
+  span.badge{
+    color: white;
+    font-size: 24px;
+    float:left;
+    line-height: 42px;
+    height: 42px;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  
+  .u_title span{
+    display:inline-block;
+    vertical-align: middle;
+    background-color: #4072B3;
+  }
+  
+  .u_title h2{
+    /* margin-left: 48px; */
+  }
+  
+  .u_title h2 {
+    font-size: 28px;
+    /* display: inline; */
+    height: 48px;
+    margin:
+    vertical-align: middle;
+    border-bottom: solid 3px #cce4ff;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .u_title h2:after {
+    position: absolute;
+    content: " ";
+    display: inline;      /* インラインブロック要素にする */
+    display: block;
+    border-bottom: solid 3px #6088C6;
+    bottom: -3px;
+    width: 20%;
+  }
+  
+  .place_img{
+    width: auto;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+  }
+  
+  .place_img img{
+    max-width :100%;
+      max-height: 100%;
+      object-fit: cover;
+  }
+  
+  .u_rankBox span:first-child{
+      font-size: 30px;
+      color: transparent;
+      background-image: linear-gradient(orange, orange), linear-gradient(gray, gray);
+      background-position: left, right;
+      background-repeat: no-repeat;
+      background-size: var(--rate) 100%, calc(100% - var(--rate)) 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+  }
+  
+  .u_rankBox{
+    margin-top: 15px;
+  }
+  
+  .u_rankBox span:first-child:before{
+      content: "★★★★★";
+  }
+  
+  .u_rankBox span:nth-child(2){
+    font-family: -webkit-body;
+    margin-left: 5px;
+    font-size: 28px;
+  }
+  
+  .u_rankBox .evaluateNumber{
+    color: #f36d33;
+  }
+  
+  .box1 {
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      border: solid 3px #000000;
+  }
+  .box1 p {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .divider{
+    height:120px;
+  }
+  
+  .u_categoryTipsItem{
+    margin-top: 10px;
+  }
+  
+  .u_categoryTipsItem dl {
+      display: flex;
+      clear: both;
+      padding: 9px 7px;
+      margin: 0px;
+      font-size: 16px;
+      border-bottom: 1px dotted #ccc;
+  }
+  
+  .u_categoryTipsItem dt {
+      float: left;
+      width: 100px;
+      width: 130px;
+      border-right: 1px solid #ccc;
+  }
+  
+  .u_categoryTipsItem .is_rank {
+      float: none;
+      width: auto;
+      padding-right: 40px;
+      border-right: 1px solid #ccc;
+  }
+  
+  .u_categoryTipsItem .is_rank .evaluateNumber {
+      font-family: -webkit-body;
+      color: #f36d33;
+      font-size: 16px;
+      font-weight: bold;
+  }
+  
+  .pagination li.disabled a {
+      pointer-events: none;    
+  }
+  
